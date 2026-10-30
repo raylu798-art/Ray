@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fafafa">
+  <meta name="description" content="鹿雷，AI 产品负责人、创始人 & CTO。专注多智能体协作、企业知识库与本地 AI，将业务问题转化为可交付的产品。">
+  <title>鹿雷 · AI 产品负责人 / 产品与系统</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="hero-stage.css">
+  <script src="app.js" defer></script>
+  <script src="hero-stage.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳转到主要内容</a>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="主导航">
+      <a class="wordmark" href="#" aria-label="Ray，返回首页"><img src="assets/favicon.svg" alt="" width="32" height="32"></a>
+      <div class="nav-links"><a href="#work">精选作品</a><a href="#impact">落地成果</a><a href="#about">关于我</a></div>
+      <a class="nav-contact" href="#contact">聊聊 AI 产品 <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="intro-line"><span class="availability-dot" aria-hidden="true"></span> Hi, I’m Ray.</p>
+        <h1 id="hero-title">让 AI 的可能，<br><span>成为产品的日常。</span></h1>
+        <p class="hero-description">连接业务、模型与工程。<br>构建可用、可信、可持续迭代的 AI 产品。</p>
+        <div class="hero-actions"><a class="button button-blue" href="#work">探索我的作品 <span aria-hidden="true">↓</span></a><a class="text-link" href="assets/lulei-resume.pdf" download="鹿雷简历.pdf">下载简历 <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v9m-3-3 3 3 3-3M4 13v4h12v-4"/></svg></a></div>
+      </div>
+      <div class="intelligence-stage product-stage" aria-label="AI 产品矩阵">
+        <p class="hero-stage-caption">AI 原生产品 <span>产品能力示意</span></p>
+        <div class="product-stage-light" aria-hidden="true"></div>
+        <div class="hero-product-deck">
+          <article class="hero-card-slot" data-hero-product="helms" data-active="true" aria-label="Helms 多智能体协作">
+            <div class="hero-card-surface">
+              <div class="hero-card-brand"><img src="assets/brands/helms.svg" width="36" height="36" alt=""><span>Helms</span></div>
+              <p class="hero-card-title">让目标，<br>变成协作。</p>
+              <p class="hero-card-description">数字员工 · 可控执行</p>
+              <div class="hero-card-visual hero-task-path" aria-label="目标、角色与结果"><span>目标</span><i aria-hidden="true"></i><span>角色</span><i aria-hidden="true"></i><span>结果</span></div>
+              <div class="hero-card-footer"><span>Agent 协作</span><a href="#helms" aria-label="了解 Helms 产品">查看产品 <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+          <article class="hero-card-slot" data-hero-product="helmskb" data-active="false" aria-label="HelmsKB 企业知识库">
+            <div class="hero-card-surface">
+              <div class="hero-card-brand"><img src="assets/brands/helmskb.svg" width="36" height="36" alt=""><span>HelmsKB</span></div>
+              <p class="hero-card-title">让知识，<br>形成答案。</p>
+              <p class="hero-card-description">企业级 RAG · 原文引用</p>
+              <div class="hero-card-visual hero-knowledge-lines" aria-hidden="true"><i></i><i></i><i></i><span>原文可追溯</span></div>
+              <div class="hero-card-footer"><span>可信知识</span><a href="#helmskb" aria-label="了解 HelmsKB 产品">查看产品 <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+          <article class="hero-card-slot" data-hero-product="zhihui" data-active="false" aria-label="ZhiHui 知会本地会议助手">
+            <div class="hero-card-surface">
+              <div class="hero-card-brand"><img src="assets/brands/zhihui.svg" width="36" height="36" alt=""><span>ZhiHui <small>知会</small></span></div>
+              <p class="hero-card-title">让讨论，<br>成为行动。</p>
+              <p class="hero-card-description">本地优先 · 智能会议</p>
+              <div class="hero-card-visual hero-meeting-wave" aria-hidden="true"></div>
+              <div class="hero-card-footer"><span>本地 AI</span><a href="#zhihui" aria-label="了解知会产品">查看产品 <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </article>
+        </div>
+        <div class="hero-product-selector" role="group" aria-label="选择主展示产品">
+          <button type="button" data-hero-choice="helms" aria-pressed="true">Helms</button>
+          <button type="button" data-hero-choice="helmskb" aria-pressed="false">HelmsKB</button>
+          <button type="button" data-hero-choice="zhihui" aria-pressed="false">知会</button>
+        </div>
+        <div class="stage-footnote"><span>业务理解 <i></i> 模型能力 <i></i> 工程落地</span><span class="stage-note">让三者，在产品中交汇。</span></div>
+      </div>
+    </section>
+
+    <section class="work-section section-space" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <div class="section-heading"><div><p class="eyebrow">精选 AI 产品</p><h2 id="work-title">从真实问题出发。<br><span class="muted">让想法，有所作为。</span></h2></div><p class="section-aside">从产品定义、架构设计，<br>到 AI Coding 与工程交付。<br>亲自推进，从 0 到 1。</p></div>
+
+        <article class="flagship project" id="helms">
+          <div class="project-head"><div><div class="product-name"><span class="product-icon helms-icon" aria-hidden="true"><img class="product-logo" src="assets/brands/helms.svg" alt="" width="64" height="64"></span><span>Helms</span><span class="product-type">多智能体协作平台</span></div><h3>一个目标。<br>一支数字团队。</h3></div><div class="project-intro"><p>将 Agent 定义为具备身份、记忆与技能的数字员工。围绕任务拆解、角色分工和人机协作，设计可管理的 AI 数字组织。</p><button class="text-link case-link" data-case="helms" aria-haspopup="dialog" aria-controls="case-dialog">了解产品思考 <span aria-hidden="true">↗</span></button></div></div>
+          <div class="workspace-frame" id="workspace">
+            <div class="window-bar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>Helms · 数字组织</span><span class="demo-caption">产品机制示意</span></div>
+            <div class="workspace-body">
+              <aside class="workspace-sidebar" aria-hidden="true"><div class="sidebar-brand"><span class="mini-h"><img class="product-logo" src="assets/brands/helms.svg" alt="" width="64" height="64"></span>Helms</div><div class="workspace-label">我的工作空间</div><div class="sidebar-item selected"><span>◈</span>任务协作</div><div class="sidebar-item"><span>◎</span>数字员工</div><div class="sidebar-item"><span>▤</span>组织记忆</div><div class="sidebar-team"><span class="team-avatar">鹿</span><div>我的数字组织<small>人机协作 · 可控执行</small></div></div></aside>
+              <div class="workspace-main"><div class="demo-top"><div><p class="workspace-label">从意图，到执行</p><h4 id="demo-task-title">让团队完成一份行业研究</h4></div><span class="demo-status" id="demo-status">流程示意</span></div>
+                <div class="scenario-tabs" role="group" aria-label="选择协作演示场景"><button class="scenario active" aria-pressed="true" data-scenario="research">行业研究</button><button class="scenario" aria-pressed="false" data-scenario="plan">方案策划</button><button class="scenario" aria-pressed="false" data-scenario="document">文档分析</button></div>
+                <div class="agent-flow"><div class="agent-card" data-step="0"><span class="agent-avatar planner" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5"/></svg></span><strong id="role-0">规划 Agent</strong><span id="task-0">理解目标 · 拆解任务</span><small class="step-state">待命</small></div><span class="flow-connector" aria-hidden="true">→</span><div class="agent-card" data-step="1"><span class="agent-avatar researcher" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6M7 10h6M10 7v6"/></svg></span><strong id="role-1">研究 Agent</strong><span id="task-1">收集资料 · 交叉验证</span><small class="step-state">待命</small></div><span class="flow-connector" aria-hidden="true">→</span><div class="agent-card" data-step="2"><span class="agent-avatar reviewer" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h14v17H5zM9 4V2h6v2M8 10h8m-8 4h5m-5 4h8"/></svg></span><strong id="role-2">交付 Agent</strong><span id="task-2">整合结果 · 追溯依据</span><small class="step-state">待命</small></div></div>
+                <div class="execution-strip"><span class="execution-icon" aria-hidden="true">↳</span><p id="execution-text">每一步有分工，关键决策由人确认。</p><a class="demo-button" id="helms-demo-link" href="https://www.helms.wiki" target="_blank" rel="noopener noreferrer" aria-label="打开 Helms 在线演示（新窗口）">在线演示 <span aria-hidden="true">↗</span></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-footer"><span>产品定位 · 协作机制 · 企业治理 · AI Coding</span><span>2025.07 — 至今</span></div>
+        </article>
+
+        <div class="project-pair">
+          <article class="project knowledge-project" id="helmskb"><div class="product-name"><span class="product-icon kb-icon" aria-hidden="true"><img class="product-logo" src="assets/brands/helmskb.svg" alt="" width="64" height="64"></span><span>HelmsKB</span></div><h3>让企业知识，<br>成为可信的答案。</h3><p class="project-description">从分散文档到知识资产。贯通解析、检索、重排与生成，让回答有依据，让知识有边界。</p>
+            <button class="text-link case-link" data-case="helmskb" aria-haspopup="dialog" aria-controls="case-dialog">了解产品思考 <span aria-hidden="true">↗</span></button>
+            <div class="knowledge-visual" aria-label="HelmsKB 检索链路示意"><div class="visual-caption"><span>知识到答案的路径</span><small>产品机制示意</small></div><div class="source-docs" aria-hidden="true"><div class="doc-sheet doc-back"><span>DOCX</span><i></i><i></i><i></i></div><div class="doc-sheet doc-front"><span>PDF</span><i></i><i></i><i></i><b></b></div></div><div class="retrieval-path"><span>解析</span><i></i><span>检索</span><i></i><span>重排</span></div><div class="answer-fragment"><span class="answer-spark" aria-hidden="true">✦</span><div><strong>基于企业知识，形成有据回答。</strong><p>原文引用可追溯，知识访问可控制。</p><span class="citation-pill">↗ 原文依据</span><span class="citation-pill">私有化部署</span></div></div></div>
+            <div class="pair-bottom"><span>RAG · 知识治理 · 效果评测</span><a class="circle-link" href="https://www.kb.helms.wiki" target="_blank" rel="noopener noreferrer" aria-label="打开 HelmsKB 在线演示（新窗口）" title="打开 HelmsKB 在线演示">↗</a></div></article>
+
+          <article class="project meeting-project" id="zhihui"><div class="product-name"><span class="product-icon zhihui-icon" aria-hidden="true"><img class="product-logo" src="assets/brands/zhihui.svg" alt="" width="64" height="64"></span><span>ZhiHui</span></div><h3>专注当下的对话。<br>把纪要，交给 AI。</h3><p class="project-description">本地优先的 AI 会议助手。连接音频采集、实时转写与结构化纪要，兼顾隐私、效率和自主控制。</p>
+            <button class="text-link case-link" data-case="zhihui" aria-haspopup="dialog" aria-controls="case-dialog">了解产品思考 <span aria-hidden="true">↗</span></button>
+            <div class="meeting-visual"><div class="visual-caption"><span><span class="tiny-green-dot" aria-hidden="true"></span> 本地优先</span><small>产品机制示意</small></div><div class="waveform" id="waveform" aria-hidden="true"></div><div class="meeting-output"><div class="meeting-tabs" role="tablist" aria-label="会议结果示意"><button id="summary-tab" role="tab" aria-selected="true" aria-controls="meeting-panel" data-meeting-tab="summary">会议纪要</button><button id="todo-tab" role="tab" aria-selected="false" aria-controls="meeting-panel" data-meeting-tab="todo" tabindex="-1">待办事项</button></div><div id="meeting-panel" role="tabpanel" aria-labelledby="summary-tab"><strong>把一次讨论，沉淀为可执行的信息。</strong><p>讨论要点、关键决策与潜在风险，<br>以清晰结构呈现。</p></div><span class="local-tag"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="2"/><path d="M5 7V5a3 3 0 0 1 6 0v2"/></svg> 纯本地模式 · 数据在设备内处理</span></div></div>
+            <div class="pair-bottom"><span>本地 ASR · 多模型接入 · 桌面交付</span><a class="circle-link" href="https://www.zhihui.helms.wiki" target="_blank" rel="noopener noreferrer" aria-label="打开 ZhiHui 在线演示（新窗口）" title="打开 ZhiHui 在线演示">↗</a></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="impact-section section-space" id="impact" aria-labelledby="impact-title"><div class="impact-grid" aria-hidden="true"></div><div class="wrap impact-content"><div class="section-heading"><div><p class="eyebrow">复杂系统，真实交付</p><h2 id="impact-title">产品的价值，<br><span>在落地之后。</span></h2></div><p class="section-aside">从城市级平台到智算基础设施，<br>经历过真实业务的复杂，<br>更理解一款产品如何走向交付。</p></div><div class="metrics"><div class="metric"><p><strong>60<span>%</span></strong><small>约</small></p><span>AICITY 人工复检工作量减少</span></div><div class="metric"><p><strong>20<span>+</span></strong></p><span>标准能力复用的行业场景</span></div><div class="metric"><p><strong>4<span>亿元</span></strong><small>近</small></p><span>统筹的算力中心项目群规模</span></div><div class="metric"><p><strong>300</strong><small>PFLOPS · 约</small></p><span>项目群交付的 AI 算力</span></div></div>
+        <div class="impact-cases"><details><summary><div><span class="impact-category">平台产品</span><h3>AICITY 智慧城市</h3><p>让多源感知、智能研判与事件处置，形成闭环。</p></div><span class="expand-icon" aria-hidden="true">+</span></summary><div class="impact-detail"><p>规划物联网、数据、事件、AI 四大中台，将多场景需求抽象为统一数据对象和可复用平台能力。设计 RBAC + ABAC 权限体系，支撑跨组织的数据隔离与受控协作。</p><p>围绕「告警聚合 → 多模态复检 → 事件归并 → 风险分级 → 人工确认」优化事件治理，减少约 60% 的人工复检工作量；典型项目月均支撑约 2,000–3,000 起事件流转。</p><span>产品规划与平台架构 · 2021.12 — 2024.01</span></div></details><details><summary><div><span class="impact-category">基础设施与交付</span><h3>三地智算中心项目群</h3><p>从总体架构，到建设交付，再到正式运营。</p></div><span class="expand-icon" aria-hidden="true">+</span></summary><div class="impact-detail"><p>作为项目负责人，统筹青海昆仑、河南新乡、四川川南算力中心项目群，覆盖 GPU 计算资源、高性能网络、存储系统、云平台与算力服务。</p><p>协调多地政府客户、合作伙伴、供应商与研发交付团队，推进方案评审、实施、系统集成、验收与回款，推动三个算力中心建成并投入正式运营。</p><span>项目负责人 · 2023.03 — 2024.12</span></div></details></div>
+      </div></section>
+
+    <section class="about-section section-space wrap" id="about" aria-labelledby="about-title"><div class="section-heading"><div><p class="eyebrow">关于我</p><h2 id="about-title">以产品思考。<br><span class="muted">用工程验证。</span></h2></div></div><div class="about-layout"><div class="profile-column"><div class="portrait-frame"><img src="assets/ray-glacier.jpg" alt="冰川前的个人户外照片" width="1200" height="1600" loading="lazy"><span class="portrait-label">鹿雷<small>Lu Lei</small></span></div><p class="profile-bio">10 余年企业级产品与项目实践。<br>现在，把更多精力投入 AI 原生产品：<br>理解业务，拆解系统，亲手验证。</p><div class="expertise-tags"><span>AI 产品规划</span><span>Agent / RAG</span><span>平台架构</span><span>AI Coding</span><span>复杂项目交付</span></div></div>
+        <div class="career-column"><div class="career-item"><div class="career-time"><span>2025.07 — 至今</span><span class="current-label">当前</span></div><h3>北京林深处商务咨询有限公司</h3><p class="career-role">创始人 & CTO</p><p>负责 AI 技术战略、产品规划与整体架构。推进 Helms、HelmsKB、ZhiHui，从产品机制设计到研发、评测与版本交付。</p></div><div class="career-item"><div class="career-time"><span>2021.12 — 2025.07</span></div><h3>北京升哲科技有限公司</h3><p class="career-role">产品总监 → 运营中心总监</p><p>主导 AICITY 平台规划，参与 40 人规模产研团队管理。负责大型政企解决方案与算力中心项目群的统筹交付。</p></div><div class="career-item"><div class="career-time"><span>2015.07 — 2021.12</span></div><h3>北京同步科技有限公司</h3><p class="career-role">产品经理 → 产品总监</p><p>推进智能楼宇与 AIoT 云管理产品从 0 到 1。累计推动取得 8 项专利、15 项软件著作权，积累产品标准化与商业化实践。</p></div><div class="education"><div><span class="small-label">教育背景</span><strong>河北大学</strong><p>信息管理与信息系统 · 本科<br>2011.09 — 2015.06</p></div><div><span class="small-label">专业认证</span><p>PMP · NPDP<br>高级信息系统项目管理师<br>高级智能算力工程师</p></div></div></div>
+      </div></section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="contact-glow" aria-hidden="true"></div><div class="wrap contact-inner"><p class="eyebrow">期待下一次有价值的连接</p><h2 id="contact-title">下一段 AI 产品故事，<br><span>一起开始。</span></h2><p>交流 AI 产品机会、产品想法，或一个值得解决的问题。</p><div class="contact-actions"><a class="button button-blue" href="mailto:hbululei@126.com">给我写邮件 <span aria-hidden="true">↗</span></a><button class="button button-white" id="copy-email">复制邮箱 <svg viewBox="0 0 20 20" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M12 7V3H3v9h4"/></svg></button></div><div class="contact-details"><a href="mailto:hbululei@126.com">hbululei@126.com</a><span aria-hidden="true">·</span><a href="tel:15032200860">150 3220 0860</a></div></div></section>
+  </main>
+
+  <footer class="site-footer wrap"><a class="footer-name" href="#">鹿雷 <span>AI 产品与系统</span></a><p>© 2026 Lu Lei</p><a class="back-top" href="#">回到顶部 <span aria-hidden="true">↑</span></a></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog class="case-dialog" id="case-dialog" aria-labelledby="case-title"><div class="case-dialog-inner"><button class="close-dialog" aria-label="关闭项目详情"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button><p class="eyebrow" id="case-category"></p><h2 id="case-title"></h2><p class="case-subtitle" id="case-subtitle"></p><div class="case-meta" id="case-meta"></div><div class="case-body" id="case-body"></div><div class="case-bottom"><span>内容依据个人简历整理</span><a class="text-link" href="assets/lulei-resume.pdf" target="_blank" rel="noopener">查看完整简历 <span aria-hidden="true">↗</span></a></div></div></dialog>
+</body>
+</html>

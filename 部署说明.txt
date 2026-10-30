@@ -1,0 +1,98 @@
+鹿雷 / Ray AI 产品个人网站
+Mac mini M4（macOS / Apple Silicon）部署说明
+源码同步日期：2026-10-30
+
+1. 包内内容
+
+dist/index.html                  网站首页与内容
+dist/styles.css                  页面样式与响应式布局
+dist/app.js                      案例、场景切换与导航交互源码
+dist/hero-stage.css              悬浮产品卡片样式
+dist/hero-stage.js               悬浮产品卡片动效与切换交互
+dist/assets/brands/              Helms、HelmsKB、知会的 SVG 标准图标
+dist/assets/ray-glacier.jpg       当前“关于我”照片
+dist/assets/lulei-resume.pdf      可下载的完整简历
+dist/assets/favicon.svg          个人网站图标
+Caddyfile                        默认监听 8080 端口的静态站配置
+start.command                    Mac 启动入口
+package.json                     可选的开发命令
+SHA256SUMS.txt                   包内文件校验清单
+
+dist 内的 HTML、CSS、JS 就是可直接修改的源码，也是实际部署文件，无需构建。
+网站没有服务端数据库、模型推理服务或 npm 依赖。
+M4 负责提供静态文件，卡片动效由访问者的浏览器执行。
+
+2. 推荐启动方法
+
+将压缩包复制到 Mac mini 并解压。建议放到固定位置，例如：
+  ~/Sites/lulei-ai-portfolio
+
+打开终端，进入解压后的文件夹：
+  cd "$HOME/Sites/lulei-ai-portfolio"
+
+服务器需要 Caddy 2。已安装 Homebrew 时可执行：
+  brew install caddy
+
+也可从 Caddy 官方网站下载适用于 macOS / Apple Silicon 的版本，并使 caddy 命令位于 PATH 中。
+  https://caddyserver.com/docs/install
+
+启动：
+  bash start.command
+
+启动脚本会先校验配置，再启动网站。
+本机打开：http://127.0.0.1:8080
+同一局域网内其他设备打开：http://Mac-mini的局域网IP:8080
+服务器的防火墙需允许选定端口的入站访问。
+
+start.command 以前台方式运行，按 Control+C 停止。
+长期运行时，可将 start.command 交给服务器现有的进程管理或开机自启机制。
+请保持整个目录在固定位置，且服务进程具有读取该目录的权限。
+
+仅校验配置：
+  bash start.command --check
+
+仅查看启动参数：
+  bash start.command --help
+
+3. 已有 Web 服务器时
+
+如果 Mac mini 已经使用 Nginx、Caddy 或其他静态站服务器，直接把 dist 的内容放入所选站点的根目录即可。
+保持 assets 子目录与 index.html 的相对位置，完整复制整个 dist。
+现有反向代理或隧道服务也可以将后端指向 http://127.0.0.1:8080。
+
+4. 修改端口、域名和 HTTPS
+
+修改端口：将 Caddyfile 第一行的 :8080 改为需要的端口，例如 :8090，然后重新启动。
+
+使用域名：将 :8080 改成实际域名，例如 resume.example.com。
+域名需要指向可到达这台服务器的地址，HTTP/HTTPS 入口应按你的网络方式配置。
+直接由 Caddy 提供公网 HTTPS 时，需要满足官方自动 HTTPS 文档中的域名验证与网络条件。
+  https://caddyserver.com/docs/automatic-https
+
+如果 HTTPS 已由上游反向代理或隧道服务处理，通常保留当前 HTTP 端口作为后端即可。
+修改配置后可先运行 bash start.command --check，再重新启动。
+
+5. 后续维护
+
+修改文字：dist/index.html
+修改样式：dist/styles.css
+修改交互：dist/app.js 与 dist/hero-stage.js
+替换照片和图标：dist/assets/ 中的对应资源，同时检查 HTML 中的引用路径。
+
+仅修改静态文件通常无需重新启动 Caddy；刷新浏览器即可。
+如果把启动脚本放入服务管理器，工作目录和配置路径由脚本自动定位。
+可选的 npm 命令只是便捷入口，运行网站本身不需要 Node.js。
+
+6. 完整性检查
+
+在解压后的项目根目录运行：
+  shasum -a 256 -c SHA256SUMS.txt
+
+此部署包包含最新页面、新照片、品牌图标、简历 PDF 和真实演示网址。
+仓库不包含其他网站、调试截图、缓存、账号凭据或本机绝对路径。
+目标 Mac mini 尚未由本次打包操作实际连接或部署。
+
+参考文档
+安装 Caddy：https://caddyserver.com/docs/install
+静态站部署：https://caddyserver.com/docs/quick-starts/static-files
+命令行与配置校验：https://caddyserver.com/docs/command-line

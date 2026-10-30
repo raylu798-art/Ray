@@ -1,0 +1,12 @@
+{
+  "name": "ray-ai-portfolio",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Ray / 鹿雷的 AI 产品作品与个人履历网站",
+  "scripts": {
+    "dev": "python3 -m http.server 4175 --bind 127.0.0.1 --directory dist",
+    "start": "python3 -m http.server 4175 --bind 127.0.0.1 --directory dist",
+    "check": "node --check dist/app.js && node --check dist/hero-stage.js",
+    "serve:mac": "bash start.command"
+  }
+}
